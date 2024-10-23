@@ -1,1 +1,0 @@
-# Machine-Learning-Terapan-Proyek-Pertama
