@@ -75,7 +75,7 @@ teknik ini digunakan untuk mengubah data kategorikal (label) menjadi data numeri
 - Handling Outlier
 Handling outlier berfungsi untuk meningkatkan akurasi, mencegah overfitting, dan membuat model lebih stabil serta mudah diinterpretasikan. Dengan menangani data ekstrem, model fokus pada pola yang lebih representatif, sehingga hasil prediksi lebih konsisten. 
 - Train-Test-Split
-proses ini berguna untuk membagi dataset menjadi data training dan testing pembagian data pada proyek ini ada 80:20.
+proses ini berguna untuk membagi dataset menjadi data training dan testing pembagian data pada proyek ini ada 80:30.
 
 - Standarisasi
 Proses  ini dilakukan untuk Meningkatkan performa algoritma machine learning. Standarisasi ini diterapkan pada kolom-kolom yang memiliki fitur numerik.
@@ -89,7 +89,7 @@ Mwnggunakan Decision Tree yang merupakan algoritma yang membangun model klasifik
 Random Forest adalah algoritma ensemble yang mengombinasikan hasil dari beberapa pohon keputusan (Decision Tree) untuk menghasilkan satu prediksi akhir. Algoritma ini menggunakan proses bagging atau bootstrap aggregating, di mana setiap pohon dilatih menggunakan subset data yang berbeda. Pada proyek ini, model Random Forest menggunakan 100 n_estimators dan dibatasi dengan kedalaman maksimum 
 3 untuk menjaga keseimbangan antara bias dan variansi.
 
-Berdasarkan hasil AdaBoost lebih unggul dalam hal menangani kesalahan prediksi dan akurasi pada dataset daripada Random Forest dengan metrik akurasi, recall dan F1 score lebih tinggi 1%
+Saya mengambil data weighted average dikarenakan data imbalance yang mana data kanker jinak (benign) lebih banyak daripada kanker ganas(malignant). Berdasarkan hasil train AdaBoost lebih unggul dalam hal menangani kesalahan prediksi dan akurasi pada dataset daripada Random Forest dengan metrik presisi 1%, akurasi, recall dan F1 score lebih tinggi 2%.
 
 ## Evaluation
 Metrik evaluasi yang digunakan  adalah Confusion Matrix yang merupakan sebuah teknik yang digunakan dalam data mining dan machine learning untuk menghitung seberapa baik sebuah model dapat memprediksi label dari sebuah data seperti contoh pada gambar dibawah.
