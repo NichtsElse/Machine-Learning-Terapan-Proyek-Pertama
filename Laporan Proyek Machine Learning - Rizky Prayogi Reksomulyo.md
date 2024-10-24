@@ -26,26 +26,39 @@ Hasil proyek ini dapat berkontribusi pada peningkatan akses dan kualitas diagnos
 data yang digunakan adalah Breast Cancer Wisconsin (Diagnostic) yang bersumber di kaggle. Dataset ini terdiri dari 569 baris data, dan memiliki 32 kolom data dan dapat diperoleh dari [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic).
 
 ### Variabel-variabel pada dataset adalah sebagai berikut:
-- ID number
--  Diagnosis (M = Malignant(ganas), B = Benign(jinak))
--  10 fitur utama untuk setiap inti sel:
-a) radius (rata-rata jarak dari pusat ke titik-titik di keliling)
-b) texture (standar deviasi nilai gray-scale)
-c) perimeter(keliling)
-d) area
-e) smoothness (variasi lokal dalam panjang radius)
-f) compactness (perimeter^2 / area - 1.0)
-g) concavity (tingkat keparahan bagian cekung pada kontur)
-h) concave points (jumlah bagian cekung dari kontur)
-i) symmetry
-j) fractal dimension ("perkiraan tepi" - 1)
-mean, standard error dan "worst" dari fitur-fitur ini dihitung untuk 10 fitur utama, menghasilkan 30 fitur yaitu: 
+1.  ID number
+2.  Diagnosis (M = Malignant(ganas), B = Benign(jinak))
+3.  10 fitur utama untuk setiap inti sel:
+ a. radius (rata-rata jarak dari pusat ke titik-titik di keliling)
+ b. texture (standar deviasi nilai gray-scale)
+ c. perimeter(keliling)
+ d. area
+ e. smoothness (variasi lokal dalam panjang radius)
+ f. compactness (perimeter^2 / area - 1.0)
+ g. concavity (tingkat keparahan bagian cekung pada kontur)
+ h. concave points (jumlah bagian cekung dari kontur)
+ i. symmetry
+ j. fractal dimension ("perkiraan tepi" - 1)
+mean, standard error dan "worst" dari fitur-fitur ini dihitung untuk 10 fitur utama menghasilkan 30 fitur.
 
-Dalam Proyek ini, terdapat beberapa bentuk visualisasi data yang diberikan, seperti penggunaan sns.boxplot untuk mengetahui adanya outliers
-- univariate analysis
+### Exploratory Data Analysis
 
-- multivariate analysis
-![presisi!](https://github.com/NichtsElse/Machine-Learning-Terapan-Proyek-Pertama/blob/main/corr.png)
+#### univariate analysis
+![presisi!](https://github.com/NichtsElse/Machine-Learning-Terapan-Proyek-Pertama/blob/main/bar1.png)
+#### multivariate analysis
+![presisi!](https://github.com/NichtsElse/Machine-Learning-Terapan-Proyek-Pertama/blob/main/cor.png)
+
+![presisi!](https://github.com/NichtsElse/Machine-Learning-Terapan-Proyek-Pertama/blob/main/mean.png)
+
+![presisi!](https://github.com/NichtsElse/Machine-Learning-Terapan-Proyek-Pertama/blob/main/se.png)
+
+![presisi!](https://github.com/NichtsElse/Machine-Learning-Terapan-Proyek-Pertama/blob/main/worst.png)
+
+![presisi!](https://github.com/NichtsElse/Machine-Learning-Terapan-Proyek-Pertama/blob/main/outliermean.png)
+
+![presisi!](https://github.com/NichtsElse/Machine-Learning-Terapan-Proyek-Pertama/blob/main/outlierse.png)
+
+![presisi!](https://github.com/NichtsElse/Machine-Learning-Terapan-Proyek-Pertama/blob/main/outlierworst.png)
 ## Data Preparation
 Dalam data preparation, dilakukan beberapa hal  sebelum memasukkan data ke model latih yaitu:
 - Label Encoder
