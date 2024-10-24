@@ -31,14 +31,23 @@ data yang digunakan adalah Breast Cancer Wisconsin (Diagnostic) yang bersumber d
 3.  10 fitur utama untuk setiap inti sel:
    
  a. radius (rata-rata jarak dari pusat ke titik-titik di keliling). 
+ 
  b. texture (standar deviasi nilai gray-scale).
+ 
  c. perimeter(keliling).
+ 
  d. area.
+ 
  e. smoothness (variasi lokal dalam panjang radius).
+ 
  f. compactness (perimeter^2 / area - 1.0).
+ 
  g. concavity (tingkat keparahan bagian cekung pada kontur).
+ 
  h. concave points (jumlah bagian cekung dari kontur).
+ 
  i. symmetry.
+ 
  j. fractal dimension ("perkiraan tepi" - 1).
  
 mean, standard error dan "worst" dari fitur-fitur ini dihitung untuk 10 fitur utama menghasilkan 30 fitur.
