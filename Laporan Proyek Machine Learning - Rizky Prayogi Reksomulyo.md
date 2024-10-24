@@ -42,28 +42,38 @@ data yang digunakan adalah Breast Cancer Wisconsin (Diagnostic) yang bersumber d
 mean, standard error dan "worst" dari fitur-fitur ini dihitung untuk 10 fitur utama menghasilkan 30 fitur.
 
 ### Exploratory Data Analysis
-
-#### univariate analysis
+pada proyek ini terdapat beberapa visualisasi seperti pada dibawah yaitu bar chart data diagnosis
 ![presisi!](https://github.com/NichtsElse/Machine-Learning-Terapan-Proyek-Pertama/blob/main/bar1.png)
-#### multivariate analysis
+
+visualisasi korelasi antar variabel pada heatmap
 ![presisi!](https://github.com/NichtsElse/Machine-Learning-Terapan-Proyek-Pertama/blob/main/cor.png)
 
+visualisasi pairplot pada bagian variabel mean
 ![presisi!](https://github.com/NichtsElse/Machine-Learning-Terapan-Proyek-Pertama/blob/main/mean.png)
 
+visualisasi pairplot pada bagian variabel standard error
 ![presisi!](https://github.com/NichtsElse/Machine-Learning-Terapan-Proyek-Pertama/blob/main/se.png)
 
+visualisasi pairplot pada bagian variabel worst
 ![presisi!](https://github.com/NichtsElse/Machine-Learning-Terapan-Proyek-Pertama/blob/main/worst.png)
 
+visualisasi outliers pada bagian variabel mean
 ![presisi!](https://github.com/NichtsElse/Machine-Learning-Terapan-Proyek-Pertama/blob/main/outliermean.png)
 
+visualisasi pairplot pada bagian variabel standard error
 ![presisi!](https://github.com/NichtsElse/Machine-Learning-Terapan-Proyek-Pertama/blob/main/outlierse.png)
 
+visualisasi pairplot pada bagian variabel worst
 ![presisi!](https://github.com/NichtsElse/Machine-Learning-Terapan-Proyek-Pertama/blob/main/outlierworst.png)
+
 ## Data Preparation
 Dalam data preparation, dilakukan beberapa hal  sebelum memasukkan data ke model latih yaitu:
+
 - Label Encoder
 teknik ini digunakan untuk mengubah data kategorikal (label) menjadi data numerik.
 
+- Handling Outlier
+Handling outlier berfungsi untuk meningkatkan akurasi, mencegah overfitting, dan membuat model lebih stabil serta mudah diinterpretasikan. Dengan menangani data ekstrem, model fokus pada pola yang lebih representatif, sehingga hasil prediksi lebih konsisten. 
 - Train-Test-Split
 proses ini berguna untuk membagi dataset menjadi data training dan testing pembagian data pada proyek ini ada 80:20.
 
