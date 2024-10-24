@@ -28,8 +28,7 @@ data yang digunakan adalah Breast Cancer Wisconsin (Diagnostic) yang bersumber d
 ### Variabel-variabel pada dataset adalah sebagai berikut:
 1.  ID number
 2.  Diagnosis (M = Malignant(ganas), B = Benign(jinak))
-3.  10 fitur utama untuk setiap inti sel:
-   
+3.  10 fitur utama untuk setiap inti sel:   
  a. radius (rata-rata jarak dari pusat ke titik-titik di keliling)
  
  b. texture (standar deviasi nilai gray-scale)
