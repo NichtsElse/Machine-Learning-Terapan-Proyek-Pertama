@@ -23,60 +23,93 @@ Hasil proyek ini dapat berkontribusi pada peningkatan akses dan kualitas diagnos
 - Sebagai metrik pembanding, menggunakan beberapa metrik evaluasi antara lain Akurasi, Precision, Recall, dan F1-Score untuk mendapatkan gambaran yang lebih komprehensif mengenai performa model dalam mendeteksi kanker jinak(benign) dan ganas(malignant).
 
 ## Data Understanding
-data yang digunakan adalah Breast Cancer Wisconsin (Diagnostic) yang bersumber di kaggle. Dataset ini terdiri dari 569 baris data, dan memiliki 32 kolom data dan dapat diperoleh dari [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic).
+data yang digunakan adalah Breast Cancer Wisconsin (Diagnostic) yang bersumber di kaggle. Dataset ini terdiri dari 569 baris data, memiliki 32 kolom data dan dapat diperoleh dari [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic). Kondisi data setelah di cek tidak terdapat missing value atau duplikat hanya memilik outliers saja.
 
 ### Variabel-variabel pada dataset adalah sebagai berikut:
 1.  ID number
 2.  Diagnosis (M = Malignant(ganas), B = Benign(jinak))
-3.  10 fitur utama untuk setiap inti sel:
    
- a. radius (rata-rata jarak dari pusat ke titik-titik di keliling). 
+10 fitur utama untuk setiap inti sel:
+1.  radius (rata-rata jarak dari pusat ke titik-titik di keliling). 
+2. texture (standar deviasi nilai gray-scale).
+3. perimeter(keliling).
+4. area(nilai area).
+5. smoothness (variasi lokal dalam panjang radius).
+6. compactness (perimeter^2 / area - 1.0).
+7. concavity (tingkat keparahan bagian cekung pada kontur).
+8. concave points (jumlah bagian cekung dari kontur).
+9. symmetry(nilai simetris).
+10. fractal dimension ("perkiraan tepi" - 1).
  
- b. texture (standar deviasi nilai gray-scale).
- 
- c. perimeter(keliling).
- 
- d. area.
- 
- e. smoothness (variasi lokal dalam panjang radius).
- 
- f. compactness (perimeter^2 / area - 1.0).
- 
- g. concavity (tingkat keparahan bagian cekung pada kontur).
- 
- h. concave points (jumlah bagian cekung dari kontur).
- 
- i. symmetry.
- 
- j. fractal dimension ("perkiraan tepi" - 1).
- 
-mean, standard error dan "worst" dari fitur-fitur ini dihitung untuk 10 fitur utama menghasilkan 30 fitur.
+mean, standard error dan "worst" dari fitur-fitur ini dihitung untuk 10 fitur utama yang menghasilkan 30 fitur.
+nilai  mean pada 10 fitur utama:
+1. radius_mean(rata-rata dari nilai radius). 
+2. texture_mean(rata-rata dari nilai texture).
+3. perimeter_mean(rata-rata dari nilai perimeter).
+4. area_mean(rata-rata dari nilai area).
+5. smoothness_mean (rata-rata dari nilai smoothness).
+6. compactness_mean rata-rata dari nilai compactness).
+7. concavity_mean (rata-rata dari nilai concavity).
+8. concave points_mean(rata-rata dari nilai concave points).
+9. symmetry_mean(rata-rata dari nilai symmetry).
+10. fractal dimension_mean (rata-rata dari nilai fractal dimension).
+    
+nilai standard error pada 10 fitur utama:
+1. radius_se(standard error dari nilai radius). 
+2. texture_se(standard error dari nilai texture).
+3. perimeter_se(standard error dari nilai perimeter).
+4. area_se(standard error dari nilai area).
+5. smoothness_se(standard error dari nilai smoothness).
+6. compactness_se(standard error darii nilai compactness).
+7. concavity_se(standard error dari nilai concavity).
+8. concave points_se(standard error dari nilai concave points).
+9. symmetry_se(standard error dari nilai symmetry).
+10. fractal dimension_se(standard error dari nilai fractal dimension). 
+
+nilai worst pada 10 fitur utama:
+1. radius_worst(nilai worst dari radius). 
+2. texture_worst(nilai worst dari texture).
+3. perimeter_worst(nilai worst dari perimeter).
+4. area_worst(nilai worst dari area).
+5. smoothness_worst(nilai worst dari smoothness).
+6. compactness_worst(nilai worst dari compactness).
+7. concavity_worst(nilai worst dari concavity).
+8. concave points_worst(nilai worst dari concave points).
+9. symmetry_worst(nilai worst dari simetris).
+10. fractal dimension_worst(nilai worst dari fractal dimension).
 
 ### Exploratory Data Analysis
-pada proyek ini terdapat beberapa visualisasi seperti pada dibawah yaitu bar chart data diagnosis
+pada proyek ini terdapat beberapa visualisasi seperti pada dibawah yaitu bar chart data diagnosis.
 <img width="481" alt="bar1" src="https://github.com/user-attachments/assets/ea8def24-8b50-4946-a3fd-6e1b60185f54">
+berdasarkan gambar diatas bahwa nilai benign lebih banyak dari malignant.
 
-visualisasi korelasi antar variabel pada heatmap
-![presisi!](https://github.com/NichtsElse/Machine-Learning-Terapan-Proyek-Pertama/blob/main/cor.png)
+visualisasi korelasi antar variabel pada heatmap.
+![cor](https://github.com/user-attachments/assets/f364bbfb-f5ae-4a06-a093-72809733f244)
+berdasarkan gambar diatas bahwa Fitur radius, perimeter dan area memiliki korelasi sangat kuat satu sama lain, yang menunjukkan bahwa ketika satu nilai meningkat, yang lain juga cenderung meningkat.
 
+visualisasi pairplot pada bagian variabel mean.
+![mean](https://github.com/user-attachments/assets/096b5581-751d-4f9b-b6e3-83b628555d2c)
+berdasarkan gambar diatas bahwa beberapa korelasi positif terlihat kuat antara fitur seperti radius_mean, perimeter_mean, dan area_mean, terutama membedakan dua kelas diagnosis.
 
-visualisasi pairplot pada bagian variabel mean
-![presisi!](https://github.com/NichtsElse/Machine-Learning-Terapan-Proyek-Pertama/blob/main/mean.png)
+visualisasi pairplot pada bagian variabel standard error.
+![se](https://github.com/user-attachments/assets/6b343fca-528c-4e6f-867c-986ecfb2e956)
+berdasarkan gambar diatas bahwa sebagian besar fitur tidak memiliki korelasi yang kuat satu sama lain, kecuali beberapa fitur seperti radius_se, perimeter_se, dan area_se, yang menunjukkan korelasi lumayan kuat. Fitur-fitur ini masih cukup baik dalam memisahkan dua kelas diagnosis.
 
-visualisasi pairplot pada bagian variabel standard error
-![presisi!](https://github.com/NichtsElse/Machine-Learning-Terapan-Proyek-Pertama/blob/main/se.png)
+visualisasi pairplot pada bagian variabel worst.
+![worst](https://github.com/user-attachments/assets/f65c1c66-b54c-4367-ab7b-e8253df78813)
+berdasarkan gambar diatas bahwa ada beberapa korelasi yang sangat kuat antara fitur seperti radius_worst, perimeter_worst, dan area_worst.
 
-visualisasi pairplot pada bagian variabel worst
-![presisi!](https://github.com/NichtsElse/Machine-Learning-Terapan-Proyek-Pertama/blob/main/worst.png)
+visualisasi outliers pada bagian variabel mean.
+![outliermean](https://github.com/user-attachments/assets/27c6e0e3-baa6-4c18-912d-8ab2a11cdd3c)
+berdasarkan gambar diatas bahwa terdapat banyak nilai outliers pada variabel mean.
 
-visualisasi outliers pada bagian variabel mean
-![presisi!](https://github.com/NichtsElse/Machine-Learning-Terapan-Proyek-Pertama/blob/main/outliermean.png)
+visualisasi pairplot pada bagian variabel standard error.
+![outlierse](https://github.com/user-attachments/assets/87fd6cd9-6ca9-40ea-a1b8-0442acce1e56)
+berdasarkan gambar diatas bahwa terdapat banyak nilai outliers pada variabel standard error.
 
-visualisasi pairplot pada bagian variabel standard error
-![presisi!](https://github.com/NichtsElse/Machine-Learning-Terapan-Proyek-Pertama/blob/main/outlierse.png)
-
-visualisasi pairplot pada bagian variabel worst
-![presisi!](https://github.com/NichtsElse/Machine-Learning-Terapan-Proyek-Pertama/blob/main/outlierworst.png)
+visualisasi pairplot pada bagian variabel worst.
+![outlierworst](https://github.com/user-attachments/assets/f6422838-d773-41b4-8cd7-5ace951cca89)
+berdasarkan gambar diatas bahwa terdapat banyak nilai outliers pada variabel worst.
 
 ## Data Preparation
 Dalam data preparation, dilakukan beberapa hal  sebelum memasukkan data ke model latih yaitu:
@@ -85,7 +118,8 @@ Dalam data preparation, dilakukan beberapa hal  sebelum memasukkan data ke model
 teknik ini digunakan untuk mengubah data kategorikal (label) menjadi data numerik.
 
 - Handling Outlier
-Handling outlier berfungsi untuk meningkatkan akurasi, mencegah overfitting, dan membuat model lebih stabil serta mudah diinterpretasikan. Dengan menangani data ekstrem, model fokus pada pola yang lebih representatif, sehingga hasil prediksi lebih konsisten. 
+Handling outlier berfungsi untuk meningkatkan akurasi, mencegah overfitting, dan membuat model lebih stabil serta mudah diinterpretasikan. Dengan menangani data ekstrem, model fokus pada pola yang lebih representatif, sehingga hasil prediksi lebih konsisten.
+
 - Train-Test-Split
 proses ini berguna untuk membagi dataset menjadi data training dan testing pembagian data pada proyek ini ada 80:30.
 
@@ -101,7 +135,7 @@ Menggunakan Decision Tree yang merupakan algoritma yang membangun model klasifik
 Random Forest adalah algoritma ensemble yang mengombinasikan hasil dari beberapa pohon keputusan (Decision Tree) untuk menghasilkan satu prediksi akhir. Algoritma ini menggunakan proses bagging atau bootstrap aggregating, di mana setiap pohon dilatih menggunakan subset data yang berbeda. Pada proyek ini, model Random Forest menggunakan 100 n_estimators dan dibatasi dengan kedalaman maksimum 
 3 untuk menjaga keseimbangan antara bias dan variansi.
 
-Saya mengambil data weighted average dikarenakan data imbalance yang mana data kanker jinak (benign) lebih banyak daripada kanker ganas(malignant). Berdasarkan hasil train AdaBoost lebih unggul dalam hal menangani kesalahan prediksi dan akurasi pada dataset daripada Random Forest dengan metrik presisi 1%, akurasi, recall dan F1 score lebih tinggi 2%.
+Saya mengambil data weighted average dikarenakan data imbalance yang mana data kanker jinak(benign) lebih banyak daripada kanker ganas(malignant). Berdasarkan hasil train AdaBoost lebih unggul dalam hal menangani kesalahan prediksi dan akurasi pada dataset daripada Random Forest dengan metrik presisi 1%, akurasi, recall dan F1 score lebih tinggi 2%.
 
 ## Evaluation
 Metrik evaluasi yang digunakan  adalah Confusion Matrix yang merupakan sebuah teknik yang digunakan dalam data mining dan machine learning untuk menghitung seberapa baik sebuah model dapat memprediksi label dari sebuah data seperti contoh pada gambar dibawah.
