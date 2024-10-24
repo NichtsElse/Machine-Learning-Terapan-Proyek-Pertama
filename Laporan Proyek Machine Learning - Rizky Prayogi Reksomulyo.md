@@ -128,4 +128,5 @@ berdasarkan hasil evaluasi diatas model Adaptive Boosting adalah model terbaik u
 
 ## Daftar Pustaka
 [1] Ferlay J, Ervik M, Lam F, Laversanne M, Colombet M, Mery L, Piñeros M, Znaor A, Soerjomataram I, Bray F (2024). Global Cancer Observatory: Cancer Today. Lyon, France: International Agency for Research on Cancer. Available from: https://gco.iarc.who.int/today, accessed 22 October 2024.
+
 [2] World Health Organization (2024). Breast Cancer. Online at https://www.who.int/news-room/fact-sheets/detail/breast-cancer, accessed 22 October 2024
