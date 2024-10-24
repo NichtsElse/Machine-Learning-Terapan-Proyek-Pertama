@@ -81,6 +81,7 @@ nilai worst pada 10 fitur utama:
 ### Exploratory Data Analysis
 pada proyek ini terdapat beberapa visualisasi seperti pada dibawah yaitu bar chart data diagnosis.
 <img width="481" alt="bar1" src="https://github.com/user-attachments/assets/ea8def24-8b50-4946-a3fd-6e1b60185f54">
+
 berdasarkan gambar diatas bahwa nilai benign lebih banyak dari malignant.
 
 visualisasi korelasi antar variabel pada heatmap.
