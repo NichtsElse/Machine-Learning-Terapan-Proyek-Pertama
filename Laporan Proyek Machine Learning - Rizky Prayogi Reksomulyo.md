@@ -83,7 +83,7 @@ Proses  ini dilakukan untuk Meningkatkan performa algoritma machine learning. St
 ## Modeling
 Model yang saya gunakan pada proyek ini yaitu:
 - Adaptive Boosting
-Mwnggunakan Decision Tree yang merupakan algoritma yang membangun model klasifikasi dengan memecah data berdasarkan fitur yang paling relevan untuk membuat keputusan. Pada proyek ini, model Decision Tree digunakan dengan kedalaman maksimum(max_depth) sebesar 3, yang berarti pohon keputusan dibatasi hingga tiga tingkat untuk mencegah overfitting. Lalu menggunakan AdaBoost yang merupakan metode boosting yang meningkatkan performa model dengan menggabungkan beberapa weak learners (seperti Decision Tree) menjadi model yang lebih kuat. Pada proyek ini, AdaBoost digunakan dengan estimator berupa model Decision Tree yang memiliki kedalaman maksimum 3 dan jumlah estimators sebanyak 1000. Hal ini membantu model belajar dari kesalahan prediksi sebelumnya, meningkatkan akurasi secara keseluruhan.
+Menggunakan Decision Tree yang merupakan algoritma yang membangun model klasifikasi dengan memecah data berdasarkan fitur yang paling relevan untuk membuat keputusan. Pada proyek ini, model Decision Tree digunakan dengan kedalaman maksimum(max_depth) sebesar 3, yang berarti pohon keputusan dibatasi hingga tiga tingkat untuk mencegah overfitting. Lalu menggunakan AdaBoost yang merupakan metode boosting yang meningkatkan performa model dengan menggabungkan beberapa weak learners (seperti Decision Tree) menjadi model yang lebih kuat. Pada proyek ini, AdaBoost digunakan dengan estimator berupa model Decision Tree yang memiliki kedalaman maksimum 3 dan jumlah estimators sebanyak 1000. Hal ini membantu model belajar dari kesalahan prediksi sebelumnya, meningkatkan akurasi secara keseluruhan.
 
 - Random Forest
 Random Forest adalah algoritma ensemble yang mengombinasikan hasil dari beberapa pohon keputusan (Decision Tree) untuk menghasilkan satu prediksi akhir. Algoritma ini menggunakan proses bagging atau bootstrap aggregating, di mana setiap pohon dilatih menggunakan subset data yang berbeda. Pada proyek ini, model Random Forest menggunakan 100 n_estimators dan dibatasi dengan kedalaman maksimum 
@@ -124,7 +124,7 @@ Precision   : 97%
 Recall      : 97%
 F1 Score    : 97%
 
-berdasarkan hasil evaluasi diatas model Decision Tree + adaboost adalah model terbaik untuk mengklasifikasi kanker payudara
+berdasarkan hasil evaluasi diatas model Adaptive Boosting adalah model terbaik untuk mengklasifikasi kanker payudara
 
 ## Daftar Pustaka
 [1] Ferlay J, Ervik M, Lam F, Laversanne M, Colombet M, Mery L, Piñeros M, Znaor A, Soerjomataram I, Bray F (2024). Global Cancer Observatory: Cancer Today. Lyon, France: International Agency for Research on Cancer. Available from: https://gco.iarc.who.int/today, accessed 22 October 2024.
