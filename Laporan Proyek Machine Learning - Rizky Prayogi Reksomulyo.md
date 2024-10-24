@@ -54,10 +54,11 @@ mean, standard error dan "worst" dari fitur-fitur ini dihitung untuk 10 fitur ut
 
 ### Exploratory Data Analysis
 pada proyek ini terdapat beberapa visualisasi seperti pada dibawah yaitu bar chart data diagnosis
-![presisi!](https://github.com/NichtsElse/Machine-Learning-Terapan-Proyek-Pertama/blob/main/bar1.png)
+<img width="481" alt="bar1" src="https://github.com/user-attachments/assets/ea8def24-8b50-4946-a3fd-6e1b60185f54">
 
 visualisasi korelasi antar variabel pada heatmap
 ![presisi!](https://github.com/NichtsElse/Machine-Learning-Terapan-Proyek-Pertama/blob/main/cor.png)
+
 
 visualisasi pairplot pada bagian variabel mean
 ![presisi!](https://github.com/NichtsElse/Machine-Learning-Terapan-Proyek-Pertama/blob/main/mean.png)
