@@ -91,19 +91,19 @@ visualisasi korelasi antar variabel pada heatmap.
 
 berdasarkan gambar diatas bahwa Fitur radius, perimeter dan area memiliki korelasi sangat kuat satu sama lain, yang menunjukkan bahwa ketika satu nilai meningkat, yang lain juga cenderung meningkat.
 
-visualisasi pairplot pada bagian variabel mean.
+visualisasi pairplot pada field mean.
 
 ![mean](https://github.com/user-attachments/assets/096b5581-751d-4f9b-b6e3-83b628555d2c)
 
 berdasarkan gambar diatas bahwa beberapa korelasi positif terlihat kuat antara fitur seperti radius_mean, perimeter_mean, dan area_mean, terutama membedakan dua kelas diagnosis.
 
-visualisasi pairplot pada bagian variabel standard error.
+visualisasi pairplot pada field standard error.
 
 ![se](https://github.com/user-attachments/assets/6b343fca-528c-4e6f-867c-986ecfb2e956)
 
 berdasarkan gambar diatas bahwa sebagian besar fitur tidak memiliki korelasi yang kuat satu sama lain, kecuali beberapa fitur seperti radius_se, perimeter_se, dan area_se, yang menunjukkan korelasi lumayan kuat. Fitur-fitur ini masih cukup baik dalam memisahkan dua kelas diagnosis.
 
-visualisasi pairplot pada bagian variabel worst.
+visualisasi pairplot pada field worst.
 
 ![worst](https://github.com/user-attachments/assets/f65c1c66-b54c-4367-ab7b-e8253df78813)
 
@@ -140,7 +140,7 @@ Handling outlier berfungsi untuk meningkatkan akurasi, mencegah overfitting, dan
 proses ini berguna untuk membagi dataset menjadi data training dan testing pembagian data pada proyek ini ada 80:30.
 
 - Standarisasi
-Proses  ini dilakukan untuk Meningkatkan performa algoritma machine learning. Standarisasi ini diterapkan pada kolom-kolom yang memiliki fitur numerik.
+Proses  ini dilakukan untuk Meningkatkan performa algoritma machine learning. Standarisasi menggunakan standartscaler dan diterapkan pada kolom-kolom yang memiliki fitur numerik.
 
 ## Modeling
 Model yang saya gunakan pada proyek ini yaitu:
