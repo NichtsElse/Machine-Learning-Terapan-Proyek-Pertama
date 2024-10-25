@@ -80,36 +80,51 @@ nilai worst pada 10 fitur utama:
 
 ### Exploratory Data Analysis
 pada proyek ini terdapat beberapa visualisasi seperti pada dibawah yaitu bar chart data diagnosis.
+
 <img width="481" alt="bar1" src="https://github.com/user-attachments/assets/ea8def24-8b50-4946-a3fd-6e1b60185f54">
 
 berdasarkan gambar diatas bahwa nilai benign lebih banyak dari malignant.
 
 visualisasi korelasi antar variabel pada heatmap.
+
 ![cor](https://github.com/user-attachments/assets/f364bbfb-f5ae-4a06-a093-72809733f244)
+
 berdasarkan gambar diatas bahwa Fitur radius, perimeter dan area memiliki korelasi sangat kuat satu sama lain, yang menunjukkan bahwa ketika satu nilai meningkat, yang lain juga cenderung meningkat.
 
 visualisasi pairplot pada bagian variabel mean.
+
 ![mean](https://github.com/user-attachments/assets/096b5581-751d-4f9b-b6e3-83b628555d2c)
+
 berdasarkan gambar diatas bahwa beberapa korelasi positif terlihat kuat antara fitur seperti radius_mean, perimeter_mean, dan area_mean, terutama membedakan dua kelas diagnosis.
 
 visualisasi pairplot pada bagian variabel standard error.
+
 ![se](https://github.com/user-attachments/assets/6b343fca-528c-4e6f-867c-986ecfb2e956)
+
 berdasarkan gambar diatas bahwa sebagian besar fitur tidak memiliki korelasi yang kuat satu sama lain, kecuali beberapa fitur seperti radius_se, perimeter_se, dan area_se, yang menunjukkan korelasi lumayan kuat. Fitur-fitur ini masih cukup baik dalam memisahkan dua kelas diagnosis.
 
 visualisasi pairplot pada bagian variabel worst.
+
 ![worst](https://github.com/user-attachments/assets/f65c1c66-b54c-4367-ab7b-e8253df78813)
+
 berdasarkan gambar diatas bahwa ada beberapa korelasi yang sangat kuat antara fitur seperti radius_worst, perimeter_worst, dan area_worst.
 
 visualisasi outliers pada bagian variabel mean.
+
 ![outliermean](https://github.com/user-attachments/assets/27c6e0e3-baa6-4c18-912d-8ab2a11cdd3c)
+
 berdasarkan gambar diatas bahwa terdapat banyak nilai outliers pada variabel mean.
 
 visualisasi pairplot pada bagian variabel standard error.
+
 ![outlierse](https://github.com/user-attachments/assets/87fd6cd9-6ca9-40ea-a1b8-0442acce1e56)
+
 berdasarkan gambar diatas bahwa terdapat banyak nilai outliers pada variabel standard error.
 
 visualisasi pairplot pada bagian variabel worst.
+
 ![outlierworst](https://github.com/user-attachments/assets/f6422838-d773-41b4-8cd7-5ace951cca89)
+
 berdasarkan gambar diatas bahwa terdapat banyak nilai outliers pada variabel worst.
 
 ## Data Preparation
@@ -140,23 +155,21 @@ Saya mengambil data weighted average dikarenakan data imbalance yang mana data k
 
 ## Evaluation
 Metrik evaluasi yang digunakan  adalah Confusion Matrix yang merupakan sebuah teknik yang digunakan dalam data mining dan machine learning untuk menghitung seberapa baik sebuah model dapat memprediksi label dari sebuah data seperti contoh pada gambar dibawah.
+
 ![presisi!](https://miro.medium.com/v2/resize:fit:750/format:webp/1*f5ZeXvhsNFZ4q91M4Lotgg.jpeg)
+
 Selanjutnya saya akan membahas secara rinci mengenai metrik akurasi, precision, recall, dan F1-score sebagai berikut:
 1. Akurasi
-Akurasi adalah persentase prediksi yang benar dari keseluruhan prediksi yang dilakukan oleh model. akurasi dapat dihitung menggunakan rumus dibawah.
-![presisi!](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*gFW6rXbctrhWHxD8OXi4wg.png)
+Akurasi adalah persentase prediksi yang benar dari keseluruhan prediksi yang dilakukan oleh model.
  
 2. Precision (Presisi)
-Precision adalah persentase prediksi yang benar dari semua prediksi yang positif. Dengan kata lain, precision mengukur akurasi dari prediksi positif model. Precision dapat dihitung menggunakan rumus dibawah.
-![presisi!](https://miro.medium.com/v2/resize:fit:828/format:webp/1*VXnUvOEdf3IiYVCD6Wd2vg.png)
+Precision adalah persentase prediksi yang benar dari semua prediksi yang positif. Dengan kata lain, precision mengukur akurasi dari prediksi positif model. 
 
 3. Recall (Sensitivitas)
-Recall adalah persentase dari semua kasus positif yang terdeteksi oleh model. Ini mengukur seberapa baik model dapat menangkap semua kasus yang benar-benar positif. Recall dapat dihitung menggunakan rumus dibawah.
-![presisi!](https://miro.medium.com/v2/resize:fit:828/1*OV0hfgCStTI8hy6lAY1SdA.jpeg)
+Recall adalah persentase dari semua kasus positif yang terdeteksi oleh model. Ini mengukur seberapa baik model dapat menangkap semua kasus yang benar-benar positif.
 
 4. F1-Score
-F1-score adalah rata-rata harmonis dari precision dan recall. Metrik ini berguna ketika Anda ingin mencapai keseimbangan antara precision dan recall. F1-Score dapat dihitung menggunakan rumus dibawah.
-![presisi!](https://miro.medium.com/v2/resize:fit:1100/1*tEck5hzpmrv7lfnjiT7DhQ.jpeg)
+F1-score adalah rata-rata harmonis dari precision dan recall. Metrik ini berguna ketika Anda ingin mencapai keseimbangan antara precision dan recall. 
 
 Berdasarkan hasil evaluasi menggunakan teknik yang dijelasakan sebelumnya kedua model mendapatkan hasil metrik sebagai berikut:
 1. Random Forest
