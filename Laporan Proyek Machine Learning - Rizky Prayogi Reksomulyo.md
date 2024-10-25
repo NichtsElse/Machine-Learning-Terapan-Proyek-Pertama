@@ -109,19 +109,19 @@ visualisasi pairplot pada bagian variabel worst.
 
 berdasarkan gambar diatas bahwa ada beberapa korelasi yang sangat kuat antara fitur seperti radius_worst, perimeter_worst, dan area_worst.
 
-visualisasi outliers pada bagian variabel mean.
+visualisasi outliers dengan boxplot pada bagian variabel mean.
 
 ![outliermean](https://github.com/user-attachments/assets/27c6e0e3-baa6-4c18-912d-8ab2a11cdd3c)
 
 berdasarkan gambar diatas bahwa terdapat banyak nilai outliers pada variabel mean.
 
-visualisasi pairplot pada bagian variabel standard error.
+visualisasi outliers dengan boxplot pada bagian variabel standard error.
 
 ![outlierse](https://github.com/user-attachments/assets/87fd6cd9-6ca9-40ea-a1b8-0442acce1e56)
 
 berdasarkan gambar diatas bahwa terdapat banyak nilai outliers pada variabel standard error.
 
-visualisasi pairplot pada bagian variabel worst.
+visualisasi outliers dengan boxplot pada bagian variabel worst.
 
 ![outlierworst](https://github.com/user-attachments/assets/f6422838-d773-41b4-8cd7-5ace951cca89)
 
