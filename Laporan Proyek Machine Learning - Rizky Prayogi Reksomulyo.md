@@ -134,7 +134,7 @@ Dalam data preparation, dilakukan beberapa hal  sebelum memasukkan data ke model
 teknik ini digunakan untuk mengubah data kategorikal (label) menjadi data numerik.
 
 - Handling Outlier
-Handling outlier berfungsi untuk meningkatkan akurasi, mencegah overfitting, dan membuat model lebih stabil serta mudah diinterpretasikan. Dengan menangani data ekstrem, model fokus pada pola yang lebih representatif, sehingga hasil prediksi lebih konsisten.
+Handling outlier berfungsi untuk meningkatkan akurasi, mencegah overfitting, dan membuat model lebih stabil serta mudah diinterpretasikan. Dengan menangani data ekstrem, model fokus pada pola yang lebih representatif, sehingga hasil prediksi lebih konsisten. handling outliers yang saya gunakan dengan cara menghapus data yang tidak kurang dari batas bawah dan tidak lebih dari batas atas.
 
 - Train-Test-Split
 proses ini berguna untuk membagi dataset menjadi data training dan testing pembagian data pada proyek ini ada 80:30.
