@@ -159,17 +159,29 @@ Metrik evaluasi yang digunakan  adalah Confusion Matrix yang merupakan sebuah te
 ![presisi!](https://miro.medium.com/v2/resize:fit:750/format:webp/1*f5ZeXvhsNFZ4q91M4Lotgg.jpeg)
 
 Selanjutnya saya akan membahas secara rinci mengenai metrik akurasi, precision, recall, dan F1-score sebagai berikut:
-1. Akurasi
-Akurasi adalah persentase prediksi yang benar dari keseluruhan prediksi yang dilakukan oleh model.
+1. Accuracy
+Akurasi adalah persentase prediksi yang benar dari keseluruhan prediksi yang dilakukan oleh model. Cara menghitung accuracy seperti pada rumus di bawah ini.
+
+<img width="152" alt="akurasi" src="https://github.com/user-attachments/assets/8ce2793d-3fc4-4780-93dc-e045c2d42611">
+
  
-2. Precision (Presisi)
-Precision adalah persentase prediksi yang benar dari semua prediksi yang positif. Dengan kata lain, precision mengukur akurasi dari prediksi positif model. 
+3. Precision (Presisi)
+Precision adalah persentase prediksi yang benar dari semua prediksi yang positif. Dengan kata lain, precision mengukur akurasi dari prediksi positif model. Cara menghitung precision seperti pada rumus di bawah ini.
 
-3. Recall (Sensitivitas)
-Recall adalah persentase dari semua kasus positif yang terdeteksi oleh model. Ini mengukur seberapa baik model dapat menangkap semua kasus yang benar-benar positif.
+<img width="152" alt="presisi" src="https://github.com/user-attachments/assets/f33912f5-d233-47d1-aefd-b60ab2fc36a8">
 
-4. F1-Score
-F1-score adalah rata-rata harmonis dari precision dan recall. Metrik ini berguna ketika Anda ingin mencapai keseimbangan antara precision dan recall. 
+
+5. Recall (Sensitivitas)
+Recall adalah persentase dari semua kasus positif yang terdeteksi oleh model. Ini mengukur seberapa baik model dapat menangkap semua kasus yang benar-benar positif. Cara menghitung recall seperti pada rumus di bawah ini.
+
+<img width="152" alt="recall" src="https://github.com/user-attachments/assets/778ee551-60dc-4364-ab89-d2258a1dda04">
+
+
+7. F1-Score
+F1-score adalah rata-rata harmonis dari precision dan recall. Metrik ini berguna ketika Anda ingin mencapai keseimbangan antara precision dan recall. Cara menghitung F1-Score seperti pada rumus di bawah ini.
+
+<img width="581" alt="f1" src="https://github.com/user-attachments/assets/07abb886-7c2d-424b-bd25-6d4539b3e515">
+
 
 Berdasarkan hasil evaluasi menggunakan teknik yang dijelasakan sebelumnya kedua model mendapatkan hasil metrik sebagai berikut:
 1. Random Forest
