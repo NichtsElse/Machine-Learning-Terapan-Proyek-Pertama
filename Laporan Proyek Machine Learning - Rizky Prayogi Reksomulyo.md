@@ -162,20 +162,17 @@ Selanjutnya saya akan membahas secara rinci mengenai metrik akurasi, precision, 
 1. Accuracy
 Akurasi adalah persentase prediksi yang benar dari keseluruhan prediksi yang dilakukan oleh model. Cara menghitung accuracy seperti pada rumus di bawah ini.
 
-<img width="152" alt="akurasi" src="https://github.com/user-attachments/assets/8ce2793d-3fc4-4780-93dc-e045c2d42611">
+![akurasi](https://github.com/user-attachments/assets/0d95c09f-ac45-410b-b442-6bea9783aea0)
 
- 
 3. Precision (Presisi)
 Precision adalah persentase prediksi yang benar dari semua prediksi yang positif. Dengan kata lain, precision mengukur akurasi dari prediksi positif model. Cara menghitung precision seperti pada rumus di bawah ini.
 
-<img width="152" alt="presisi" src="https://github.com/user-attachments/assets/f33912f5-d233-47d1-aefd-b60ab2fc36a8">
-
+![presisi](https://github.com/user-attachments/assets/a6e2bd90-5108-46e6-8e43-c1b30cfd4a3d)
 
 5. Recall (Sensitivitas)
 Recall adalah persentase dari semua kasus positif yang terdeteksi oleh model. Ini mengukur seberapa baik model dapat menangkap semua kasus yang benar-benar positif. Cara menghitung recall seperti pada rumus di bawah ini.
 
-<img width="152" alt="recall" src="https://github.com/user-attachments/assets/778ee551-60dc-4364-ab89-d2258a1dda04">
-
+![recall](https://github.com/user-attachments/assets/72ce4717-b24d-42ef-9131-0814b1696dc3)
 
 7. F1-Score
 F1-score adalah rata-rata harmonis dari precision dan recall. Metrik ini berguna ketika Anda ingin mencapai keseimbangan antara precision dan recall. Cara menghitung F1-Score seperti pada rumus di bawah ini.
